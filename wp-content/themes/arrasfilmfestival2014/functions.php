@@ -1,5 +1,6 @@
 <?php 
 /* Theme settings */
+setlocale(LC_ALL, 'fr_FR');
 add_theme_support('post-thumbnails');
 
 /* Custom Post Type */
