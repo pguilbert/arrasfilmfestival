@@ -7,28 +7,37 @@ Template Name: Homepage
 
 // Recent briefs
 $brief_query = array(
-	'numberposts' => 10,
-	'orderby' => 'post_date',
-	'order' => 'DESC',
-	'post_type' => 'brief',
-	'post_status' => 'publish'
+	'numberposts' 	=> 10,
+	'orderby' 		=> 'post_date',
+	'order' 		=> 'DESC',
+	'post_type' 	=> 'brief',
+	'post_status' 	=> 'publish'
 );
 
 // Random articles
 $post_random_query = array(
-	'numberposts' => 3,
-	'orderby' => 'rand',
-	'post_type' => 'post',
-	'post_status' => 'publish'
+	'numberposts' 	=> 3,
+	'orderby' 		=> 'rand',
+	'post_type' 	=> 'post',
+	'post_status' 	=> 'publish'
 );
 
 // Recent articles
 $post_recent_query = array(
-	'numberposts' => 5,
-	'orderby' => 'post_date',
-	'order' => 'DESC',
-	'post_type' => 'post',
-	'post_status' => 'publish'
+	'numberposts' 	=> 5,
+	'orderby' 		=> 'post_date',
+	'order' 		=> 'DESC',
+	'post_type' 	=> 'post',
+	'post_status' 	=> 'publish'
+);
+
+// Random pictures
+$picture_random_query = array(
+        'post_type' 		=> 'attachment',
+        'post_mime_type' 	=> 'image',
+        'post_status' 		=> 'inherit',
+        'posts_per_page' 	=> 5,
+        'orderby' 			=> 'rand'
 );
 
 /* Helpers functions */
@@ -47,9 +56,10 @@ function niceDate($date)
 }
 
 /* Wordpress functions */
-$recent_briefs = wp_get_recent_posts( $brief_query, ARRAY_A );
-$random_posts = wp_get_recent_posts( $post_random_query, ARRAY_A );
-$recent_posts = wp_get_recent_posts( $post_recent_query, ARRAY_A );
+$recent_briefs 		= wp_get_recent_posts($brief_query, ARRAY_A);
+$random_posts 		= wp_get_recent_posts($post_random_query, ARRAY_A);
+$recent_posts 		= wp_get_recent_posts($post_recent_query, ARRAY_A);
+$random_pictures 	= new WP_Query($picture_random_query);
 
 get_header(); 
 ?>
@@ -86,3 +96,6 @@ get_header();
 <?php endforeach; ?>
 
 <h2>Le festival en image</h2>
+<?php foreach($random_pictures->posts as $picture): ?>
+	<img src="<?php echo $picture->guid; ?>" />
+<?php endforeach; ?>
