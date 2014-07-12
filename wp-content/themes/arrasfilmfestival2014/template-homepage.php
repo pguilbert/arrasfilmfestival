@@ -33,11 +33,11 @@ $post_recent_query = array(
 
 // Random pictures
 $picture_random_query = array(
-        'post_type' 		=> 'attachment',
-        'post_mime_type' 	=> 'image',
-        'post_status' 		=> 'inherit',
-        'posts_per_page' 	=> 5,
-        'orderby' 			=> 'rand'
+    'post_type' 		=> 'attachment',
+    'post_mime_type' 	=> 'image',
+    'post_status' 		=> 'inherit',
+    'posts_per_page' 	=> 5,
+    'orderby' 			=> 'rand'
 );
 
 /* Helpers functions */
@@ -99,3 +99,5 @@ get_header();
 <?php foreach($random_pictures->posts as $picture): ?>
 	<img src="<?php echo $picture->guid; ?>" />
 <?php endforeach; ?>
+
+<?php get_footer(); ?>
