@@ -33,4 +33,7 @@ get_header();
 
 <?php  var_dump(paginate_links($pagination_settings)); ?>
 
-<?php get_footer(); ?>
+<?php 
+get_sidebar();
+get_footer(); 
+?>

@@ -3,7 +3,7 @@ $menu_settings = array(
 	'container'		=> false,
 	'echo'			=> false,
 	'menu_class'	=> 'yolo',
-	'walker' 		=> new Custom_Walker_Nav_Menu
+	'walker' 		=> new Custom_Walker_Nav_Menu()
 );
 
 $responsive_menu_settings = array(
@@ -11,7 +11,7 @@ $responsive_menu_settings = array(
 	'container'		=> false,
 	'echo'			=> false,
 	'menu_class'	=> 'yolo',
-	'walker' 		=> new Custom_Walker_Nav_Menu
+	'walker' 		=> new Custom_Walker_Nav_Menu()
 );
 ?>
 <!DOCTYPE html>
