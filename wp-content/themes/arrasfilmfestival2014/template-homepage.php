@@ -52,7 +52,7 @@ function isToday($post_date)
 
 function niceDate($date) 
 {
-	return strftime('%d %B %Y');
+	return strftime('%d %B');
 }
 
 /* Wordpress functions */
