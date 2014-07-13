@@ -95,7 +95,8 @@ function custom_post_type()
 add_action('init', 'custom_post_type');
 
 // Get just the avatar URL
-function get_avatar_url($get_avatar){
+function get_avatar_url($get_avatar)
+{
     preg_match("/src='(.*?)'/i", $get_avatar, $matches);
     return $matches[1];
 }
