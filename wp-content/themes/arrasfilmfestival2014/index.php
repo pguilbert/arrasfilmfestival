@@ -25,10 +25,10 @@ get_header();
 	<?php the_post_thumbnail(); ?>
 	</a>
 	<a href="<?php the_permalink(); ?>">
-			<h3><?php the_title();?></h3>
+		<h3><?php the_title();?></h3>
 	</a>
-	<p><?php the_content(); ?></p>
-	<p>Publié par <?php the_author(); ?> dans <?php the_category(', '); ?> <?php the_date(); ?></p>
+	<p><?php echo get_field('hat', get_the_ID()); ?></p>
+	<p>Publié par <?php the_author(); ?> dans <?php the_category(', '); ?> <?php the_time('j F'); ?></p>
 <?php endwhile; endif; ?>
 
 <?php  var_dump(paginate_links($pagination_settings)); ?>
