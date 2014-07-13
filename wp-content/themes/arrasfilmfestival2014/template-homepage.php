@@ -85,7 +85,7 @@ get_header();
 <h2>Dernières parutions</h2>
 <?php foreach($recent_posts as $post): ?>
 	<?php $category = get_the_category($post['ID']); ?>
-	<?php echo get_the_post_thumbnail($post['ID']); ?> 
+	<img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), '600x300')[0]; ?>" width="300"/> 
 	<h3><?php echo $post['post_title']; ?></h3>
 	<p>
 		Publié par <?php echo get_the_author_meta('display_name', $post['post_author']); ?>
