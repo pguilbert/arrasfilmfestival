@@ -1,5 +1,7 @@
-/*
-!wp-content/themes/arrasfilmfestival2014/
+*
+!wp-content/themes/arrasfilmfestival2014
+!wp-content/themes/arrasfilmfestival2014/*
 !wp-content/plugins
+!wp-content/plugins/*
 !.gitignore
 !REAME.md
