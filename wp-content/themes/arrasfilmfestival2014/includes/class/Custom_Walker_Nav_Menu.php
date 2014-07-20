@@ -10,6 +10,7 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
+		$classes = array('w-nav-link',  'nav-link');
 
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
@@ -28,7 +29,8 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$attributes = '';
 		foreach ( $atts as $attr => $value ) {
 			if ( ! empty( $value ) ) {
-				$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+				$value = parse_url($value);
+				$value = ( 'href' === $attr ) ? esc_url( $value['path'] ) : esc_attr( $value['path'] );
 				$attributes .= ' ' . $attr . '="' . $value . '"';
 			}
 		}

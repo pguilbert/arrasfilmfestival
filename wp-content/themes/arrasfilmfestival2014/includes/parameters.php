@@ -6,22 +6,9 @@ function menu_settings()
 		'menu'			=> 'principal',
 		'container'		=> false,
 		'echo'			=> false,
-		'menu_class'	=> 'yolo',
 		'walker' 		=> new Custom_Walker_Nav_Menu()
 	);
 }
-
-// Principal responsive menu settings
-function responsive_menu_settings()
-{
-	return array(
-		'menu'			=> 'principal responsive',
-		'container'		=> false,
-		'echo'			=> false,
-		'menu_class'	=> 'yolo',
-		'walker' 		=> new Custom_Walker_Nav_Menu()
-	);
-} 
 
 // Pagination settings
 function pagination_settings() 
@@ -33,8 +20,8 @@ function pagination_settings()
 		'format'    => '?paged=%#%',
 		'total'     => $wp_query->max_num_pages,
 		'current'   => max(1, get_query_var('paged')),
-		'end_size'  => 2,
-		'mid_size'  => 2,
+		'end_size'  => 1,
+		'mid_size'  => 1,
 		'prev_next' => false,
 		'type'      => 'array',
 		'add_args'  => false
@@ -54,7 +41,7 @@ function categories_settings()
 function brief_query()
 {
 	return array(
-		'numberposts' 	=> 10,
+		'numberposts' 	=> 11,
 		'order' 		=> 'DESC',
 		'orderby' 		=> 'post_date',
 		'post_status' 	=> 'publish',
@@ -88,11 +75,11 @@ function post_recent_query()
 function picture_random_query()
 {
 	return array(
-	    'orderby' 			=> 'rand',
+	    'post_type' 		=> 'attachment',
 	    'post_mime_type' 	=> 'image',
 	    'post_status' 		=> 'inherit',
-	    'post_type' 		=> 'attachment',
 	    'posts_per_page' 	=> 5,
+	    'orderby' 			=> 'rand'
 	);
 }
 
@@ -110,10 +97,7 @@ function partner_query()
 // Author order by post count
 function author_query()
 {
-	return array(
-		'order_by'	=> 'post_count',
-		'order'		=> 'DESC'
-	);
+	return new WP_User_Query(array('orderby' => 'post_count', 'order' => 'DESC'));
 } 
 
 // Recent pictures
@@ -123,7 +107,7 @@ function picture_recent_query()
 	    'post_type' 		=> 'attachment',
 	    'post_mime_type' 	=> 'image',
 	    'post_status' 		=> 'inherit',
-	    'posts_per_page' 	=> 5,
+	    'posts_per_page' 	=> 100,
 	    'orderby' 			=> 'date',
 	    'order'				=> 'DESC'
 	);
