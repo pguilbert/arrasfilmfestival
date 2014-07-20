@@ -10,17 +10,6 @@ function menu_settings()
 	);
 }
 
-// Principal responsive menu settings
-function responsive_menu_settings()
-{
-	return array(
-		'menu'			=> 'principal responsive',
-		'container'		=> false,
-		'echo'			=> false,
-		'walker' 		=> new Custom_Walker_Nav_Menu()
-	);
-} 
-
 // Pagination settings
 function pagination_settings() 
 { 
