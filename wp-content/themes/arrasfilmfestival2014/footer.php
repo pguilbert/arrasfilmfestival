@@ -52,17 +52,8 @@ $random_partners = wp_get_recent_posts(partner_query(), ARRAY_A);
 		<script src="<?php bloginfo('template_url'); ?>/js/webflow.js"></script>
 		<script src="<?php bloginfo('template_url'); ?>/js/masonry.js"></script>
 		<script src="<?php bloginfo('template_url'); ?>/js/fancybox.js"></script>
-		<script type="text/javascript">
-		var container = document.querySelector('#gallery');
-		var msnry = new Masonry( container, {
-			itemSelector: '.item',
-			columnWidth: 178,
-			gutter: 10,
-			isFitWidth: true
-		});
-		$(document).ready(function() {
-            $('.fancybox').fancybox();
-        });
-		</script>
+		<?php if(is_page_template('templates/photos.php')) : ?>
+		<script src="<?php bloginfo('template_url'); ?>/js/settings.js"></script>
+		<?php endif; ?>
 	<body>
 </html>
