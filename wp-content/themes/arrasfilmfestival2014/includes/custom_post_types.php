@@ -14,7 +14,7 @@ function custom_post_type()
 			'not_found_in_trash'	=> 'Aucune brève trouvé dans la corbeille',
 		),
 		'menu_icon'			=> 'dashicons-format-quote',
-		'public'			=> true,
+		'public'			=> false,
 		'show_ui'			=> true,
 		'capability_type'	=> array('brief', 'briefs'),
 		'capabilities'		=> array(
