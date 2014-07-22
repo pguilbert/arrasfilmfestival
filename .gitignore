@@ -1,7 +1,9 @@
 /*
 !.gitignore
 !README.md
+!.htaccess
 !wp-content/
 wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
+!wp-content/languages/
