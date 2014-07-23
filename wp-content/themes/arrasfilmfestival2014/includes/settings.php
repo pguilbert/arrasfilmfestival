@@ -75,11 +75,20 @@ function one_category_only($content)
 	return $content;
 }
 
-add_filter('get_sample_permalink_html', 'my_hide_permalinks');
 function my_hide_permalinks($in){
     global $post;
+    $out = '';
     if($post->post_type == 'brief')
         $out = preg_replace('~<div id="edit-slug-box".*</div>~Ui', '', $in);
     return $out;
 }
+add_filter('get_sample_permalink_html', 'my_hide_permalinks');
+
+function hide_yoastseo() {
+if (!current_user_can('administrator')) :
+    remove_action('admin_bar_menu', 'wpseo_admin_bar_menu',95);
+    remove_menu_page('wpseo_dashboard');
+endif;
+}
+add_action('admin_init', 'hide_yoastseo');
 ?>
