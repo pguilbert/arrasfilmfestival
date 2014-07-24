@@ -2,8 +2,11 @@
 !.gitignore
 !README.md
 !.htaccess
+!package.json
 !wp-content/
 wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
+wp-content/themes/arrasfilmfestival2014/publics
+wp-content/themes/arrasfilmfestival2014/publics/*
 !wp-content/languages/

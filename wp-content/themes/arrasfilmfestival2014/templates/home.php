@@ -24,7 +24,7 @@ $random_pictures 	= new WP_Query(picture_random_query());
 				
 				<ul class="w-list-unstyled">
 					<?php foreach($recent_briefs as $brief): ?>
-					<li><div class="flash <?php echo is_today_class($brief['post_date']); ?>"><?php echo nice_hour($brief['post_date']); ?> | <?php echo $brief['post_title']; ?></div></li>
+					<li><div class="flash <?php echo is_today_class($brief['post_date']); ?>"><?php echo nice_hour($brief['post_date']); ?> | <?php echo substr($brief['post_title'], 0, 60); ?></div></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>

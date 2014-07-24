@@ -5,10 +5,7 @@
 
 		<title><?php the_title(); ?></title>
 
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.css" type="text/css">
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/webflow.css" type="text/css">
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/app.css" type="text/css">
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/fancybox.css" type="text/css">
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/publics/css/app.css" type="text/css">
 		
 		<?php wp_head(); ?>
 	</head>

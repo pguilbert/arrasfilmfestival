@@ -1,0 +1,36 @@
+{
+  "name": "arrasfilmfestival",
+  "version": "0.1.0",
+  "description": "Website of Arras Film Festival 2014",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "combine-css": "^0.0.2",
+    "gulp": "^3.8.6",
+    "gulp-concat": "^2.3.4",
+    "gulp-concat-css": "^0.1.4",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-uglify": "^0.3.1",
+    "imagemin-pngcrush": "^0.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-concat": "^2.3.4",
+    "gulp-concat-css": "^0.1.4",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-uglify": "^0.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomapp/arrasfilmfestival.git"
+  },
+  "author": "Thomas Leduc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomapp/arrasfilmfestival/issues"
+  },
+  "homepage": "https://github.com/tomapp/arrasfilmfestival"
+}

@@ -10,14 +10,16 @@ Website
 
 Prerequisites
 -------------
-* Your server must have Rewriting & GD installed.
+* Your server must have url rewriting & GD library installed on your server.
 
 Installation
 --------------
 
 ```sh
 cd /to/your/wordpress/path
+npm install
 git clone git@github.com:tomapp/arrasfilmfestival.git
+gulp uglify
 ```
 And that's all!
 
@@ -35,7 +37,7 @@ After clone the theme in your wordpress install you need to setup it.
   * Advanced Custom Fields
     * Attach a new fields group to "Post" and call a field "Hat". Give it a limit to 200 characters. Don't forget to set the rule "Show this field when kind of publication is equals to post.".
     * Attach create a new fields group to "Partner" and call a field "Link" then, set "Kind of the publication" for be equals to "partner". 
-  * You can also activate Wp Password Generator and Capability Manager Enhanced.
+  * You can also activate Wp Password Generator.
 5. User's avatar come from Gravatar. 
 6. Regenerate your .htaccess with permalinks.
 

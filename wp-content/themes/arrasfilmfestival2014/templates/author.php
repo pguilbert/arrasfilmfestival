@@ -15,7 +15,7 @@ get_header();
 	<?php endif; ?>
 		<div class="w-col w-col-3 w-col-small-3">
 			<?php display_author_avatar($author->user_email, author_size(), author_class()); ?>
-			<a class="w-inline-block us-author-link" href="<?php echo esc_url(get_author_posts_url($author->ID)); ?>">
+			<a class="w-inline-block us-author-link w--current" href="<?php echo esc_url(get_author_posts_url($author->ID)); ?>">
 				<p class="us-author-name"><?php echo $author->display_name; ?></p>
 			</a>
 		</div>

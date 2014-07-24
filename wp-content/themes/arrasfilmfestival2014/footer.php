@@ -31,12 +31,12 @@ $random_partners = wp_get_recent_posts(partner_query(), ARRAY_A);
 								<div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"></div>
 								<div class="w-col w-col-2 w-col-small-2 w-col-tiny-2">
 									<a class="w-inline-block" target="_blank" href="https://www.facebook.com/polecom.arras">
-										<img class="thumbnail social" src="<?php bloginfo('template_url'); ?>/images/facebook.jpg" width="10" alt="53b008254ba0361a42220704_facebook.jpg">
+										<img class="thumbnail social" src="<?php bloginfo('template_url'); ?>/images/facebook.jpg" width="10" alt="Facebook">
 									</a>
 								</div>
 								<div class="w-col w-col-2 w-col-small-2 w-col-tiny-2">
 									<a class="w-inline-block" target="_blank" href="https://twitter.com/polecom_arras">
-										<img class="thumbnail social" src="<?php bloginfo('template_url'); ?>/images/twitter.jpg" width="24" alt="53b008314ba0361a42220705_twitter.jpg">
+										<img class="thumbnail social" src="<?php bloginfo('template_url'); ?>/images/twitter.jpg" width="24" alt="Twitter">
 									</a>
 								</div>
 							</div>
@@ -47,13 +47,9 @@ $random_partners = wp_get_recent_posts(partner_query(), ARRAY_A);
 		</div>
 
 		<?php wp_footer(); ?>
-		<script src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
-		<script src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
-		<script src="<?php bloginfo('template_url'); ?>/js/webflow.js"></script>
-		<script src="<?php bloginfo('template_url'); ?>/js/masonry.js"></script>
-		<script src="<?php bloginfo('template_url'); ?>/js/fancybox.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/publics/js/app.js"></script>
 		<?php if(is_page_template('templates/photos.php')) : ?>
-		<script src="<?php bloginfo('template_url'); ?>/js/settings.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/publics/js/settings.js"></script>
 		<?php endif; ?>
 	<body>
 </html>
