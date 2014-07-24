@@ -3,6 +3,7 @@
 !README.md
 !.htaccess
 !package.json
+!gulpfile.js
 !wp-content/
 wp-content/*
 !wp-content/plugins/
