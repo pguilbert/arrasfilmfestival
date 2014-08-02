@@ -234,6 +234,10 @@ p, .article ul li, .article ol li {
   margin-bottom: 9px;
   background-color: #ecf0f1;
 }
+.meta-datas {
+  font-size: 12px;
+  text-align: left;
+}
 .meta-date {
   text-align: right;
 }
