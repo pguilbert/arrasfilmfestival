@@ -7,6 +7,7 @@ function add_contributor_caps()
 	$new_caps = array(
 		'delete_brief',
 		'delete_post',
+		'delete_posts',
 		'edit_brief',
 		'edit_briefs',
 		'edit_post',
@@ -35,7 +36,6 @@ function add_contributor_caps()
 		'delete_partner',
 		'delete_partners',
 		'delete_plugins',
-		'delete_posts',
 		'delete_private_briefs',
 		'delete_private_pages',
 		'delete_private_partners',
