@@ -71,36 +71,36 @@ $random_pictures 	= new WP_Query(picture_random_query());
 				<?php $category = get_the_category($post['ID']); ?>	
 				<?php $permalink = get_permalink($post['ID']); ?>	
 				<div class="w-row">
-            		<div class="w-col w-col-6 w-col-stack">
-              			<a class="w-inline-block home-thumbnail-link" href="<?php echo $permalink; ?>">
-              				<?php responsive_thumbnail(get_post_thumbnail_id($post['ID']), home_name(), home_class()); ?>
-              			</a>
-            		</div>
-            		<div class="w-col w-col-6 w-col-stack">
-            			<a class="w-inline-block heading-link" href="<?php echo $permalink; ?>">
-            				<h4><?php echo $post['post_title']; ?></h4>
-            			</a>
-              			<p class="resume">
-              				<?php echo get_field('hat', $post['ID']); ?>
-              			</p>
-            		</div>
-          		</div>
-          		<div class="separator"></div>
-          		<div class="w-row meta">
-            		<div class="w-col w-col-6 w-col-small-6">
-              			<p class="meta-datas">
-              				Publié par 
-              				<a href="<?php echo esc_url(get_author_posts_url($post['post_author'])); ?>" class="link">
-              					<?php echo get_the_author_meta('display_name', $post['post_author']); ?>
-              				</a>dans 
-              				<a href="<?php echo get_category_link($category[0]->cat_ID); ?>" class="link"><?php echo $category[0]->name; ?></a>
-              			</p>
-            		</div>
-            		<div class="w-col w-col-6 w-col-small-6">
-              			<p class="w-hidden-tiny meta-date"><?php echo nice_date($post['post_date']); ?></p>
-            		</div>
-          		</div>
-          		<?php endforeach; ?>
+      		<div class="w-col w-col-6 w-col-stack">
+        			<a class="w-inline-block home-thumbnail-link" href="<?php echo $permalink; ?>">
+        				<?php responsive_thumbnail(get_post_thumbnail_id($post['ID']), home_name(), home_class()); ?>
+        			</a>
+      		</div>
+      		<div class="w-col w-col-6 w-col-stack">
+      			<a class="w-inline-block heading-link" href="<?php echo $permalink; ?>">
+      				<h4><?php echo $post['post_title']; ?></h4>
+      			</a>
+        			<p class="resume">
+        				<?php echo get_field('hat', $post['ID']); ?>
+        			</p>
+      		</div>
+    		</div>
+    		<div class="separator"></div>
+    		<div class="w-row meta">
+      		<div class="w-col w-col-6 w-col-small-6">
+        			<p class="meta-datas">
+        				Publié par 
+        				<a href="<?php echo esc_url(get_author_posts_url($post['post_author'])); ?>" class="link">
+        					<?php echo get_the_author_meta('display_name', $post['post_author']); ?>
+        				</a>dans 
+        				<a href="<?php echo get_category_link($category[0]->cat_ID); ?>" class="link"><?php echo $category[0]->name; ?></a>
+        			</p>
+      		</div>
+      		<div class="w-col w-col-6 w-col-small-6">
+        			<p class="w-hidden-tiny meta-date"><?php echo nice_date($post['post_date']); ?></p>
+      		</div>
+    		</div>
+    		<?php endforeach; ?>
 			</div>
 			<div class="w-col w-col-4 w-col-stack">
       			<h2>Le festival en image</h2>
