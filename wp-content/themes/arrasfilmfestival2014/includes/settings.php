@@ -84,6 +84,12 @@ function my_hide_permalinks($in){
 }
 add_filter('get_sample_permalink_html', 'my_hide_permalinks');
 
+function remove_myme_types($mime_types){
+    unset($mime_types['tiff']); //Removing the pdf extension
+    return $mime_types;
+}
+add_filter('upload_mimes', 'remove_myme_types', 1, 1);
+
 function hide_yoastseo() {
 if (!current_user_can('administrator')) :
     remove_action('admin_bar_menu', 'wpseo_admin_bar_menu',95);
