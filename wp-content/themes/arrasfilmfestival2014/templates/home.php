@@ -14,9 +14,7 @@ $random_pictures 	= new WP_Query(picture_random_query());
 		<div class="w-row">
 			<div class="w-col w-col-6 w-col-stack">
 				<h2>En direct</h2>
-				<div class="w-embed w-video responsive-video" style="padding-top: 56.59574468085107%;">
-					<iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F25197434&amp;src_secure=1&amp;url=http%3A%2F%2Fvimeo.com%2F25197434&amp;image=http%3A%2F%2Fb.vimeocdn.com%2Fts%2F460%2F928%2F460928760_1280.jpg&amp;key=96f1f04c5f4143bcb0f2e68c87d65feb&amp;type=text%2Fhtml&amp;schema=vimeo"
-					scrolling="no" frameborder="0" allowfullscreen=""></iframe>
+				<div class="w-embed w-video responsive-video">
 				</div>
 			</div>
 			<div class="w-col w-col-6 w-col-stack w-hidden-tiny">

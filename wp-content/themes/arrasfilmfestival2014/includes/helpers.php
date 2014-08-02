@@ -20,7 +20,7 @@ function is_today_class($post_date)
  */
 function nice_date($date) 
 {
-	return strftime('%d %B', strtotime($date));
+	return utf8_encode(strftime('%d %B', strtotime($date)));
 }
 
 /**
@@ -30,7 +30,7 @@ function nice_date($date)
  */
 function nice_hour($date) 
 {
-    return strftime('%H:%M', strtotime($date));
+    return utf8_encode(strftime('%H:%M', strtotime($date)));
 }
 
 /**
