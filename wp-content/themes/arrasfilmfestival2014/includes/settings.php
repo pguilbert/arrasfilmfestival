@@ -84,11 +84,12 @@ function my_hide_permalinks($in){
 }
 add_filter('get_sample_permalink_html', 'my_hide_permalinks');
 
-function remove_myme_types($mime_types){
-    unset($mime_types['tiff']); //Removing the pdf extension
-    return $mime_types;
+function remove_mime_type( $existing_mimes ) {
+    unset($existing_mimes['tif|tiff']);
+
+    return $existing_mimes;
 }
-add_filter('upload_mimes', 'remove_myme_types', 1, 1);
+add_filter( 'mime_types', 'remove_mime_type' );
 
 function hide_yoastseo() {
 if (!current_user_can('administrator')) :
