@@ -35,9 +35,12 @@
                 <a class="link author-link-margin" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" rel="author">
                     Pressbook
                 </a>
+                <?php $website = esc_url(get_the_author_meta('user_url')); ?>
+                <?php if($website) : ?>
                 <a class="link author-link-margin" href="<?php echo esc_url(get_the_author_meta('user_url')); ?>" target="_blank" rel="website">
                     Site web
                 </a> 
+                <?php endif; ?>
                 <?php echo get_the_author_meta('user_email'); ?>
             </div>
         </div>
