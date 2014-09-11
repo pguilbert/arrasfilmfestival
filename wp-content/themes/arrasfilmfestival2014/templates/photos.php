@@ -8,7 +8,7 @@ $recent_pictures 	= new WP_Query(picture_recent_query());
 get_header(); 
 ?>
 
-	<h1>Le festival en image</h1>
+	<h1 class="responsive-margin-left">Le festival en image</h1>
 	<div id="gallery">
 	<?php foreach($recent_pictures->posts as $picture): ?>
 		<?php $random = random_size(array(376, 574)); ?>

@@ -27,7 +27,7 @@ $random_pictures 	= new WP_Query(picture_random_query());
 				</ul>
 			</div>
 		</div>
-    </div>
+  </div>
 </div>
 <div class="w-hidden-tiny section hero">
     <div class="hero-text">Du 7 Novembre 2014 jusqu'au 16 Novembre 2014 </div>
