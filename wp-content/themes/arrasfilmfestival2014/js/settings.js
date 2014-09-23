@@ -5,6 +5,4 @@ var msnry = new Masonry( container, {
 	gutter: 10,
 	isFitWidth: true
 });
-$(document).ready(function() {
-    $('.fancybox').fancybox();
-});
+$('.fancybox').fancybox();
