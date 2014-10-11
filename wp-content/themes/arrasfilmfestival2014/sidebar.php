@@ -7,13 +7,13 @@
 			</div>
 			<h2>Qui sommes nous ?</h2>
 			<div class="widget">
-				<img class="w-hidden-medium w-hidden-small w-hidden-tiny picture" src="<?php bloginfo('template_url'); ?>/images/440x240.gif" width="220" alt="Nous !">
-	            <img class="w-hidden-main w-hidden-small w-hidden-tiny picture" src="<?php bloginfo('template_url'); ?>/images/334x182.gif" width="167" alt="Nous !">
-	            <img class="w-hidden-main w-hidden-medium w-hidden-tiny picture" src="<?php bloginfo('template_url'); ?>/images/1416x200.gif" width="708" alt="Nous !">
-	            <img class="w-hidden-main w-hidden-medium w-hidden-small picture" src="<?php bloginfo('template_url'); ?>/images/912x240.gif" width="456" alt="Nous !">			
+				<img class="w-hidden-medium w-hidden-small w-hidden-tiny picture" src="<?php bloginfo('template_url'); ?>/images/440x240.png" width="220" alt="Nous !">
+	            <img class="w-hidden-main w-hidden-small w-hidden-tiny picture" src="<?php bloginfo('template_url'); ?>/images/334x182.png" width="167" alt="Nous !">
+	            <img class="w-hidden-main w-hidden-medium w-hidden-tiny picture" src="<?php bloginfo('template_url'); ?>/images/1416x200.png" width="708" alt="Nous !">
+	            <img class="w-hidden-main w-hidden-medium w-hidden-small picture" src="<?php bloginfo('template_url'); ?>/images/912x240.png" width="456" alt="Nous !">			
 	            <p>
-					Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.
-		        </p>
+					Le PôleCom ou pôle de communication est un groupe d’étudiants de l’Ecole Privée des Sciences de l’Informatique (EPSI) d’Arras intéressé par les nouvelles technologies, le partage et l’explication de ces dernières. Depuis plusieurs années, nous collaborons avec l’Avenir de l’Artois sur leur page papier et sur leur site, en publiant des articles sur les nouvelles technologies. Ce partenariat sans faille, nous a permis aujourd’hui de participer à l’Arras Film Festival, et nous comptons montrer à quel point notre engagement nous tient à cœur.
+				</p>
 		    </div>
 		    <h2 class="w-hidden-medium w-hidden-small w-hidden-tiny">Rencontrez nous !</h2>
 		    <div class="w-hidden-medium w-hidden-small w-hidden-tiny widget">

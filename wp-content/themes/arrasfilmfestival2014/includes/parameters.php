@@ -16,7 +16,7 @@ function pagination_settings()
 	global $wp_query;
 
 	return array(
-		'base'		=> str_replace(999999999999, '%#%', esc_url(get_pagenum_link(999999999999))),
+		'base'		=> str_replace(999, '%#%', esc_url(get_pagenum_link(999))),
 		'format'    => '?paged=%#%',
 		'total'     => $wp_query->max_num_pages,
 		'current'   => max(1, get_query_var('paged')),
