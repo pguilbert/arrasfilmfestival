@@ -6,7 +6,9 @@
         <?php $category = get_the_category($id); ?>
         <h1><?php the_title(); ?></h1>
         <div class="article">
-            <?php responsive_thumbnail(get_post_thumbnail_id($id), single_name(), single_class()); ?>
+            <div class="article-thumbnail">
+                <?php responsive_thumbnail(get_post_thumbnail_id($id), single_name(), single_class()); ?>
+            </div>
             <div class="w-row">
                 <div class="w-col w-col-6">
                     <p class="meta-datas">
