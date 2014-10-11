@@ -6,5 +6,11 @@ var msnry = new Masonry( container, {
 	isFitWidth: true
 });
 $(document).ready(function() {
-    $('.fancybox').fancybox();
+	$('.fancybox').fancybox({
+		helpers: {
+			title: {
+				type: 'over'
+			}
+		}
+	});
 });

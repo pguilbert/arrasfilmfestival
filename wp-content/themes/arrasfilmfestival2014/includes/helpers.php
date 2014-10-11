@@ -62,13 +62,28 @@ function display_author_avatar($email, $size = array(), $class = null)
 function responsive_thumbnail($id, $name = array(), $class = null)
 {
     foreach($name as $key => $value) {
-        $width  = (explode('x', $value)[0]) / 2;
-        $height = (explode('x', $value)[1]) / 2;
+        $width  = (explode('x', $value)[0]);
+        $height = (explode('x', $value)[1]);
         $url = wp_get_attachment_image_src($id, $value)[0];
-        if($class == null) {
-            echo  '<img src="' . $url . '" width="' . $width . '" height="' . $height . '">';
+        $size = getimagesize(str_replace('http://' . $_SERVER['HTTP_HOST'] . '/', '', $url));
+        if($size[0] < $width) {
+            if($class == null) {
+                echo  '<img src="' . $url . '" height="' . $height / 2 . '"';
+            } else {
+                echo  '<img src="' . $url . '" class="' . $class[$key] . '" height="' . $height / 2 . '">';
+            }
+        } elseif($size[1] < $height) {
+            if($class == null) {
+                echo  '<img src="' . $url . '" width="' . $width / 2 . '"';
+            } else {
+                echo  '<img src="' . $url . '" class="' . $class[$key] . '" width="' . $width / 2 . '">';
+            }
         } else {
-            echo  '<img src="' . $url . '" class="' . $class[$key] . '" width="' . $width . '" height="' . $height . '">';
+            if($class == null) {
+                echo  '<img src="' . $url . '" width="' . $width / 2 . '" height="' . $height / 2 . '">';
+            } else {
+                echo  '<img src="' . $url . '" class="' . $class[$key] . '" width="' . $width / 2 . '" height="' . $height / 2 . '">';
+            }
         }
     }
 }

@@ -227,6 +227,8 @@ p, .article ul li, .article ol li {
   overflow-x: hidden;
   overflow-y: hidden;
   width: 300px;
+  background-color: black;
+  text-align: center;
 }
 .separator {
   height: 2px;
@@ -252,6 +254,8 @@ p, .article ul li, .article ol li {
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
+  background-color: black;
+  text-align: center;
 }
 .credits-datas {
   margin-bottom: 0px;
@@ -262,6 +266,8 @@ p, .article ul li, .article ol li {
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
+  background-color: black;
+  text-align: center;
 }
 .widget {
   margin-top: 10px;
@@ -374,6 +380,10 @@ p, .article ul li, .article ol li {
   margin-bottom: 60px;
   font-size: 20px;
   line-height: 36px;
+  text-align: center;
+}
+.article-thumbnail {
+  background-color: black;
   text-align: center;
 }
 @media (max-width: 991px) {
