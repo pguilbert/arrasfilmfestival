@@ -17,7 +17,7 @@ $random_pictures 	= new WP_Query(picture_random_query());
 				<div class="w-embed w-video responsive-video">
 				</div>
 			</div>
-			<div class="w-col w-col-6 w-col-stack w-hidden-tiny">
+			<div class="w-col w-col-6 w-col-stack">
 				<h2>Minute par Minute</h2>
 				
 				<ul class="w-list-unstyled">
