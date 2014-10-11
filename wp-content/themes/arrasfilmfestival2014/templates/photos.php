@@ -37,6 +37,7 @@ get_header();
 	        <?php
 	        endif;
 	        ?>
+	        </a>
         </div>
 	<?php endforeach; ?>
 	</div>
