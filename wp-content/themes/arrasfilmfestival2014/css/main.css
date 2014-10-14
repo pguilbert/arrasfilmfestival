@@ -235,6 +235,7 @@ p, .article ul li, .article ol li {
   margin-top: 4px;
   margin-bottom: 9px;
   background-color: #ecf0f1;
+  clear: both;
 }
 .meta-datas {
   font-size: 12px;
@@ -570,4 +571,24 @@ p, .article ul li, .article ol li {
 
 .item {
   margin-bottom: 10px;
+}
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
 }
