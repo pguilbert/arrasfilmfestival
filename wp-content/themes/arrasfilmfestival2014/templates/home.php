@@ -11,27 +11,31 @@ $random_posts     = wp_get_recent_posts(post_random_query(), ARRAY_A);
 $recent_posts     = wp_get_recent_posts(post_recent_query(), ARRAY_A);
 $random_pictures  = new WP_Query(picture_random_query());
 ?>
-    <div class="w-row">
-      <div class="w-col w-col-6 w-col-stack">
-        <h2>En direct</h2>
-        <div class="w-embed w-video responsive-video">
-        </div>
-      </div>
-      <div class="w-col w-col-6 w-col-stack">
-        <h2>Minute par Minute</h2>
-        
-        <ul class="w-list-unstyled">
-          <?php foreach($recent_briefs as $brief): ?>
-          <li><div class="flash <?php echo is_today_class($brief['post_date']); ?>"><small><?php echo relative_date($brief['post_date']) ?></small> <?php echo nice_hour($brief['post_date']); ?> | <?php echo substr($brief['post_title'], 0, 60); ?></div></li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="w-hidden-tiny section hero">
     <div class="hero-text">Du 7 Novembre 2014 jusqu'au 16 Novembre 2014 </div>
 </div>
+<div class="section">
+  <div class="w-container">
+    <div class="w-row">
+        <div class="w-col w-col-7 w-col-stack">
+          <h2>En direct</h2>
+          <div class="responsive-video">
+            <iframe width="560" height="315" src="//www.youtube.com/embed/fgheIyG-aAA" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="w-col w-col-5 w-col-stack">
+          <h2>Minute par Minute</h2>
+          
+          <ul class="w-list-unstyled">
+            <?php foreach($recent_briefs as $brief): ?>
+            <li><div class="flash <?php echo is_today_class($brief['post_date']); ?>"><small><?php echo relative_date($brief['post_date']) ?></small> <?php echo nice_hour($brief['post_date']); ?> | <?php echo substr($brief['post_title'], 0, 60); ?></div></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
+
 <div class="section">
     <div class="w-container">
         <h2 class="responsive-margin-left">A ne pas manquer</h2>
