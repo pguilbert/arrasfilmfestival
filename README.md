@@ -37,6 +37,7 @@ After clone the theme in your wordpress install you need to setup it.
   * Advanced Custom Fields
     * Attach a new fields group to "Post" and call a field "Hat". Give it a limit to 200 characters. Don't forget to set the rule "Show this field when kind of publication is equals to post.".
     * Attach create a new fields group to "Partner" and call a field "Link" then, set "Kind of the publication" for be equals to "partner". 
+    * Attach a new fields group to "Live". Call a "True/False" field "is_live" and a text field "additional_text". Don't forget to set the rule "Show this field when kind of publication is equals to live.".
   * You can also activate Wp Password Generator.
 5. User's avatar come from Gravatar. 
 6. Regenerate your .htaccess with permalinks.
