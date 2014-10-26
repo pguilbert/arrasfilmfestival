@@ -9,7 +9,7 @@ get_header();
 ?>
 <div class="section menu-padding">
 	<div class="w-container">
-	<h1 class="responsive-margin-left">Le festival en image</h1>
+	<h1 class="responsive-margin-left">Le festival en images</h1>
 	<div id="gallery">
 	<?php foreach($recent_pictures->posts as $picture): ?>
 		<?php 

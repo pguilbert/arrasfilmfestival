@@ -49,6 +49,18 @@ function brief_query()
 	);
 }
 
+// Get the live
+function live_query()
+{
+	return array(
+		'numberposts' 	=> 1,
+		'order' 		=> 'DESC',
+		'orderby' 		=> 'post_date',
+		'post_status' 	=> 'publish',
+		'post_type' 	=> 'live',
+	);
+}
+
 // Random 3 articles
 function post_sticky_random_query() {
 	return array(

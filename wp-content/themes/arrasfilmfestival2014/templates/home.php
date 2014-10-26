@@ -10,6 +10,7 @@ $recent_briefs    = wp_get_recent_posts(brief_query(), ARRAY_A);
 $random_sticky_posts     = wp_get_recent_posts(post_sticky_random_query(), ARRAY_A);
 $recent_posts     = wp_get_recent_posts(post_recent_query(), ARRAY_A);
 $random_pictures  = new WP_Query(picture_random_query());
+$live_posts = new WP_Query(live_query());
 ?>
 <div class="w-hidden-tiny section hero">
     <div class="hero-text">Du 7 Novembre 2014 jusqu'au 16 Novembre 2014 </div>
@@ -18,10 +19,15 @@ $random_pictures  = new WP_Query(picture_random_query());
   <div class="w-container">
     <div class="w-row">
         <div class="w-col w-col-7 w-col-stack">
-          <h2>En direct</h2>
-          <div class="responsive-video">
-            <iframe width="560" height="315" src="//www.youtube.com/embed/fgheIyG-aAA" frameborder="0" allowfullscreen></iframe>
-          </div>
+          <?php 
+            if($live_posts->have_posts()): 
+              $live_posts->the_post();
+          ?>
+            <h2><span class="live-icon <?php echo get_field('is_live') ? 'live' : '' ?>">&bull;</span>En direct <small><?php echo get_field('additional_text'); ?></small></h2>
+            <div class="responsive-video">
+                  <?php echo the_content(); ?>
+            </div>
+          <?php endif; ?>
         </div>
         <div class="w-col w-col-5 w-col-stack">
           <h2>Minute par Minute</h2>
@@ -110,7 +116,7 @@ $random_pictures  = new WP_Query(picture_random_query());
         <?php endforeach; ?>
       </div>
       <div class="w-col w-col-4 w-col-stack">
-            <h2>Le festival en image</h2>
+            <h2>Le festival en images</h2>
             <?php foreach($random_pictures->posts as $picture): ?>
             <a class="w-inline-block home-thumbnail-link" href="/photos">
               <?php responsive_thumbnail($picture->ID, home_name(), home_class()); ?>
