@@ -131,15 +131,21 @@ p, .article ul li, .article ol li {
   background-color: #f2f2f2;
 }
 .flash {
+  text-align: justify;
   font-family: Lato, sans-serif;
   color: #7f8c8d;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0 0 5px 0;
 }
 .flash.important {
   font-family: Lato, sans-serif;
+  font-size: 14px;
   color: black;
   font-weight: 400;
+}
+.flash .date{
+  font-size: 10px;
 }
 .hero-text {
   font-family: Quicksand, sans-serif;
@@ -572,4 +578,20 @@ p, .article ul li, .article ol li {
 
 .item {
   margin-bottom: 10px;
+}
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

@@ -6,6 +6,7 @@
 
 		<title><?php the_title(); ?></title>
 
+		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/publics/css/app.css" type="text/css">
 		
 		<?php wp_head(); ?>

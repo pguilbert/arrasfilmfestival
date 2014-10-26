@@ -41,7 +41,7 @@ function categories_settings()
 function brief_query()
 {
 	return array(
-		'numberposts' 	=> 11,
+		'numberposts' 	=> 8,
 		'order' 		=> 'DESC',
 		'orderby' 		=> 'post_date',
 		'post_status' 	=> 'publish',
