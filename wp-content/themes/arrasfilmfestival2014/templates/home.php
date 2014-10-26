@@ -7,7 +7,7 @@ get_header();
 
 // Queries, see inc/parameters for more infos
 $recent_briefs    = wp_get_recent_posts(brief_query(), ARRAY_A);
-$random_posts     = wp_get_recent_posts(post_random_query(), ARRAY_A);
+$random_sticky_posts     = wp_get_recent_posts(post_sticky_random_query(), ARRAY_A);
 $recent_posts     = wp_get_recent_posts(post_recent_query(), ARRAY_A);
 $random_pictures  = new WP_Query(picture_random_query());
 ?>
@@ -43,9 +43,9 @@ $random_pictures  = new WP_Query(picture_random_query());
 
 <div class="section">
     <div class="w-container">
-        <h2 class="responsive-margin-left">A ne pas manquer</h2>
+        <h2 class="responsive-margin-left">&Agrave; ne pas manquer ce jour</h2>
     <div class="w-row">
-      <?php foreach($random_posts as $post): ?>
+      <?php foreach($random_sticky_posts as $post): ?>
       <?php $permalink = get_permalink($post['ID']); ?>
           <div class="w-col w-col-4">
             <a class="w-inline-block home-thumbnail-link" href="<?php echo $permalink ?>">

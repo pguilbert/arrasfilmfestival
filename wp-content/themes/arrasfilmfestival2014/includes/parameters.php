@@ -50,12 +50,13 @@ function brief_query()
 }
 
 // Random 3 articles
-function post_random_query() {
+function post_sticky_random_query() {
 	return array(
 		'numberposts' 	=> 3,
 		'orderby' 		=> 'rand',
 		'post_status' 	=> 'publish',
 		'post_type' 	=> 'post',
+		'post__in'      =>  get_option( 'sticky_posts' ),
 	);
 }
 
