@@ -112,6 +112,9 @@ p, .article ul li, .article ol li {
   background-color: #f2f2f2;
   color: black;
 }
+.nav-img {
+  margin: -28px 0 0 -15px;
+}
 .section {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -121,26 +124,28 @@ p, .article ul li, .article ol li {
   padding-top: 84px;
 }
 .section.hero {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-image: url('../../images/bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  margin-top: 64px;
+  background-color: #ffc410;
 }
 .section.partners {
   background-color: #f2f2f2;
 }
 .flash {
+  text-align: justify;
   font-family: Lato, sans-serif;
   color: #7f8c8d;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0 0 5px 0;
 }
 .flash.important {
   font-family: Lato, sans-serif;
+  font-size: 14px;
   color: black;
   font-weight: 400;
+}
+.flash .date{
+  font-size: 10px;
 }
 .hero-text {
   font-family: Quicksand, sans-serif;
@@ -222,6 +227,9 @@ p, .article ul li, .article ol li {
 .brand {
   display: inline-block;
   margin-top: 12px;
+}
+.brand a {
+  text-decoration: none;
 }
 .home-thumbnail-link {
   overflow-x: hidden;
@@ -591,4 +599,30 @@ div.aligncenter {
 .alignleft {
     float: left;
     margin: 5px 20px 20px 0;
+}
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.live-icon {
+  font-size: 52px;
+  vertical-align: bottom;
+  color: #bdc3c7;
+}
+
+.live-icon.live {
+  color: #FF0000;
 }

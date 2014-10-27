@@ -1,4 +1,19 @@
 <?php
+
+/**
+ * True if the date is today
+ * @param  string  $post_date date of the post
+ * @return boolean
+ */
+function is_today($post_date) 
+{
+    if($post_date < date('Y-m-d')) {
+        return false;
+    }
+
+    return true;
+}
+
 /**
  * Give the class 'important' if date = today
  * @param  string  $post_date date of the post
@@ -6,11 +21,7 @@
  */
 function is_today_class($post_date) 
 {
-	if($post_date < date('Y-m-d')) {
-		return null;
-	}
-
-	return 'important';
+    return is_today($post_date) ? 'important' : null ;
 }
 
 /**
@@ -20,7 +31,21 @@ function is_today_class($post_date)
  */
 function nice_date($date) 
 {
-	return utf8_encode(strftime('%d %B', strtotime($date)));
+    return utf8_encode(strftime('%d %B', strtotime($date)));
+}
+
+/**
+ * Return a relative date at french format
+ * @param  string $date date of the element
+ * @return string       french date format (dd/MM)
+ */
+function relative_date($date) 
+{
+    if(is_today($date)){
+        return 'Aujourd\'hui';
+    } else {
+        return nice_date($date);
+    }
 }
 
 /**

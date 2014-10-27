@@ -7,8 +7,9 @@ $recent_pictures 	= new WP_Query(picture_recent_query());
 
 get_header(); 
 ?>
-
-	<h1 class="responsive-margin-left">Le festival en image</h1>
+<div class="section menu-padding">
+	<div class="w-container">
+	<h1 class="responsive-margin-left">Le festival en images</h1>
 	<div id="gallery">
 	<?php foreach($recent_pictures->posts as $picture): ?>
 		<?php 
@@ -40,6 +41,7 @@ get_header();
 	        </a>
         </div>
 	<?php endforeach; ?>
+	</div>
 	</div>
 </div>
 <?php get_footer(); ?>

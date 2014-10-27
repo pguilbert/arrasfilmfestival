@@ -75,6 +75,44 @@ function custom_post_type()
 		'menu_position'		=> 15,
 		'map_meta_cap'		=> true,
 	));
+
+	register_post_type('live', array(
+			'labels' 			=> array(
+				'name' 					=> 'OnAir',
+				'singular_name' 		=> 'Direct',
+				'add_new'				=> 'Publier',
+				'add_new_item'			=> 'Ajouter un nouveau direct',
+				'edit_item'				=> 'Modifier un direct',
+				'new_item'				=> 'Nouveau direct',
+				'search_items'			=> 'Rechercher un direct',
+				'not_found'				=> 'Aucun direct trouvé',
+				'not_found_in_trash'	=> 'Aucun direct trouvé dans la corbeille',
+			),
+			'menu_icon'			=> 'dashicons-format-video',
+			'public'			=> false,
+			'show_ui'			=> true,
+			'capability_type'	=> array('live', 'lives'),
+			'capabilities'		=> array(
+				'edit_post'		 			=> 'edit_live',
+				'read_post'		 			=> 'read_live',
+				'delete_post'		 		=> 'delete_live',
+				'edit_posts'		 		=> 'edit_lives',
+				'edit_others_posts'	 		=> 'edit_others_lives',
+				'publish_posts'		 		=> 'publish_lives',
+				'read_private_posts'	 	=> 'read_private_lives',
+	        	'delete_posts'           	=> 'delete_lives',
+	        	'delete_private_posts'   	=> 'delete_private_lives',
+	        	'delete_published_posts' 	=> 'delete_published_lives',
+	        	'delete_others_posts'    	=> 'delete_others_lives',
+	        	'edit_private_posts'     	=> 'edit_private_lives',
+	        	'edit_published_posts'   	=> 'edit_published_lives',
+	        ),
+			'capability_type'	=> 'post',
+			'hierarchical'		=> false,
+			'supports'			=> array('title', 'editor'),
+			'menu_position'		=> 16,
+			'map_meta_cap'		=> true,
+		));
 }
 
 add_action('init', 'custom_post_type');

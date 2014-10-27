@@ -41,7 +41,7 @@ function categories_settings()
 function brief_query()
 {
 	return array(
-		'numberposts' 	=> 11,
+		'numberposts' 	=> 8,
 		'order' 		=> 'DESC',
 		'orderby' 		=> 'post_date',
 		'post_status' 	=> 'publish',
@@ -49,13 +49,26 @@ function brief_query()
 	);
 }
 
+// Get the live
+function live_query()
+{
+	return array(
+		'numberposts' 	=> 1,
+		'order' 		=> 'DESC',
+		'orderby' 		=> 'post_date',
+		'post_status' 	=> 'publish',
+		'post_type' 	=> 'live',
+	);
+}
+
 // Random 3 articles
-function post_random_query() {
+function post_sticky_random_query() {
 	return array(
 		'numberposts' 	=> 3,
 		'orderby' 		=> 'rand',
 		'post_status' 	=> 'publish',
 		'post_type' 	=> 'post',
+		'post__in'      =>  get_option( 'sticky_posts' ),
 	);
 }
 
