@@ -598,10 +598,10 @@ p, .article ul li, .article ol li {
 
 .live-icon {
   font-size: 52px;
-  vertical-align: top;
+  vertical-align: bottom;
   color: #bdc3c7;
 }
 
 .live-icon.live {
-  color: #c0392b;
+  color: #FF0000;
 }
