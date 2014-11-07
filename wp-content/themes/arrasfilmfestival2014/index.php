@@ -1,5 +1,6 @@
 <?php
 get_header();
+query_posts('caller_get_posts=1');
 ?>
 <div class="section menu-padding">
 	<div class="w-container">
