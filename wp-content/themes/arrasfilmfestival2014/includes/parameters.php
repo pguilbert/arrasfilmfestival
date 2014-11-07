@@ -100,7 +100,7 @@ function picture_random_query()
 function partner_query() 
 {
 	return array(
-		'numberposts' 	=> 6,
+		'numberposts' 	=> 12,
 		'orderby' 		=> 'rand',
 		'post_type' 	=> 'partner',
 		'post_status' 	=> 'publish'

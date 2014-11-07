@@ -8,9 +8,9 @@ $random_partners = wp_get_recent_posts(partner_query(), ARRAY_A);
 					<h2 class="responsive-margin-left">Nos partenaires</h2>
 					<div class="w-row">
 						<?php foreach($random_partners as $partner): ?>
-						<div class="w-col w-col-2 w-col-small-2">
-							<a class="w-inline-block thumbnail-link partner-margin" href="<?php echo get_field('link', $partner['ID']); ?>">
-								<?php responsive_thumbnail(get_post_thumbnail_id($partner['ID']), footer_name(), footer_class()); ?>
+						<div class="w-col w-col-1 w-col-small-2 w-col-tiny-3">
+							<a class="w-inline-block partner-margin" href="<?php echo get_field('link', $partner['ID']); ?>">
+								<img src="<?php echo get_field('src-url', $partner['ID']); ?>" title="<?php echo $partner['post_title']; ?>" alt="<?php echo $partner['post_title']; ?>" />
 							</a>
 						</div>
 						<?php endforeach; ?>

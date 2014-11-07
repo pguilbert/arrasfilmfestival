@@ -71,7 +71,7 @@ function custom_post_type()
         ),
 		'capability_type'	=> 'post',
 		'hierarchical'		=> false,
-		'supports'			=> array('title', 'thumbnail'),
+		'supports'			=> array('title'),
 		'menu_position'		=> 15,
 		'map_meta_cap'		=> true,
 	));
