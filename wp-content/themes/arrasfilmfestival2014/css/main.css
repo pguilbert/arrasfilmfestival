@@ -150,8 +150,8 @@ p, .article ul li, .article ol li {
 .hero-text {
   font-family: Quicksand, sans-serif;
   color: white;
-  font-size: 24px;
-  line-height: 80px;
+  font-size: 20px;
+  line-height: 35px;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px;
 }
@@ -574,6 +574,9 @@ p, .article ul li, .article ol li {
   }
   .author-line {
     margin-bottom: 0px;
+  }
+  .section.menu-padding-mobile {
+    padding-top: 70px;
   }
 }
 

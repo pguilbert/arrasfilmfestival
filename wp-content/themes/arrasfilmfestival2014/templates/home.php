@@ -15,7 +15,7 @@ $live_posts = new WP_Query(live_query());
 <div class="w-hidden-tiny section hero">
     <div class="hero-text">Du 7 Novembre 2014 jusqu'au 16 Novembre 2014 </div>
 </div>
-<div class="section">
+<div class="section menu-padding-mobile">
   <div class="w-container">
     <div class="w-row">
         <div class="w-col w-col-7 w-col-stack">
