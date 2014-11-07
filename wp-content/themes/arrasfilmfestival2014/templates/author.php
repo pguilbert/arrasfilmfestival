@@ -7,25 +7,33 @@ $author_list = author_query();
 $i = 1;
 
 get_header();
+
+function is_viewable($author){
+	$notViewableIds = array(  ); //Change content for view
+	return !in_array($author->ID, $notViewableIds);
+} 
+
 ?>
 <div class="section menu-padding">
 	<div class="w-container">
 		<h1 class="responsive-margin-left">L’équipe</h1>
 		<?php foreach ($author_list->results as $author) : ?>
-		<?php if($i == 1) : ?>
-		<div class="w-row author-line">
-		<?php endif; ?>
-			<div class="w-col w-col-3 w-col-small-3">
-				<?php display_author_avatar($author->user_email, author_size(), author_class()); ?>
-				<a class="w-inline-block us-author-link w--current" href="<?php echo esc_url(get_author_posts_url($author->ID)); ?>">
-					<p class="us-author-name"><?php echo $author->display_name; ?></p>
-				</a>
-			</div>
-		<?php if($i == 4) : ?>
-		</div>
-		<?php $i = 0; ?>
-		<?php endif; ?>
-		<?php $i++; ?>
+			<?php if(is_viewable($author)): ?>
+				<?php if($i == 1) : ?>
+				<div class="w-row author-line">
+				<?php endif; ?>
+					<div class="w-col w-col-3 w-col-small-3">
+						<?php display_author_avatar($author->user_email, author_size(), author_class()); ?>
+						<a class="w-inline-block us-author-link w--current" href="<?php echo esc_url(get_author_posts_url($author->ID)); ?>">
+							<p class="us-author-name"><?php echo $author->display_name; ?></p>
+						</a>
+					</div>
+				<?php if($i == 4) : ?>
+				</div>
+				<?php $i = 0; ?>
+				<?php endif; ?>
+				<?php $i++; ?>
+			<?php endif; ?>
 		<?php endforeach; ?>
 		<?php if($i <= 4) : ?>
 			<?php while($i < 5) : ?>

@@ -8,6 +8,7 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/publics/css/app.css" type="text/css">
+		<link rel="shortcut icon" href="/favicon.ico" />
 		
 		<?php wp_head(); ?>
 	</head>
