@@ -25,7 +25,7 @@ get_header();
 		$size = getimagesize(str_replace('http://' . $_SERVER['HTTP_HOST'] . '/', '', $pictureUrl));
 		?>
 		<div class="item">
-			<a title="<?php echo $title; ?>" class="w-inline-block thumbnail-link fancybox" rel="Galerie" href="<?php echo wp_get_attachment_image_src($picture->ID, '800x600')[0]; ?>">
+			<a title="<?php echo $title; ?>" class="w-inline-block thumbnail-link fancybox" rel="Galerie" href="<?php echo wp_get_attachment_image_src($picture->ID, 'full')[0]; ?>">
 			<?php
 			if($size[1] < $random) :
 				$newHeight = (178 / $size[0]) * $size[1];
