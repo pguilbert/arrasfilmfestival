@@ -1,6 +1,13 @@
 <?php
 get_header();
-query_posts('caller_get_posts=1');
+
+$stickies = get_option('sticky_posts');
+if( $stickies ) {
+   $args = array( 'ignore_sticky_posts' => 1, 'post__not_in' => $stickies );
+   global $wp_query;
+   query_posts( array_merge($wp_query->query, $args) );
+}
+
 ?>
 <div class="section menu-padding">
 	<div class="w-container">
