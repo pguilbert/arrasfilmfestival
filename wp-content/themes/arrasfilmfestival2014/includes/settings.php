@@ -98,4 +98,20 @@ if (!current_user_can('administrator')) :
 endif;
 }
 add_action('admin_init', 'hide_yoastseo');
+
+add_action( 'save_post', 'w3_flush_cpt', 10, 1 );
+add_action( 'edit_post', 'w3_flush_cpt', 10, 1 );
+add_action( 'delete_post', 'w3_flush_cpt', 10, 1 );
+/**
+* Clear the W3TC cache when vacancies are added, saved or removed
+*/
+function w3_flush_cpt( $post_id ) {
+    if(!class_exists('W3_Plugin_TotalCacheAdmin'))
+        return;
+    if (get_post_type($post_id) != 'brief' || get_post_type($post_id) != 'live')
+        return;
+    $plugin_totalcacheadmin = & w3_instance('W3_Plugin_TotalCacheAdmin');
+    $plugin_totalcacheadmin->flush_all();
+}
+
 ?>
