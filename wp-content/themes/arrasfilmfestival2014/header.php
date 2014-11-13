@@ -6,8 +6,8 @@
 
 		<title><?php the_title(); ?></title>
 
-		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/publics/css/app.css" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/publics/css/app.css" type="text/css" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
 		<?php wp_head(); ?>
@@ -19,7 +19,9 @@
 				<?php echo strip_tags(wp_nav_menu(menu_settings()), '<a>'); ?>	
 			</nav>
 			<div class="w-nav-button responsive-background">
-				<div class="w-icon-nav-menu icon"></div>
+					<span class="first_line"></span>
+					<span class="second_line"></span>
+					<span class="third_line"></span>
 			</div>
 
 			<div class="w-clearfix brand">

@@ -61,5 +61,5 @@ $random_partners = wp_get_recent_posts(partner_query(), ARRAY_A);
 		ga('send', 'pageview');
 
 		</script>
-	<body>
+	</body>
 </html>

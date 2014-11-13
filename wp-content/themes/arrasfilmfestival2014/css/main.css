@@ -629,3 +629,21 @@ div.aligncenter {
 .live-icon.live {
   color: #FF0000;
 }
+
+
+.first_line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: rgb(206, 206, 206);
+}
+
+.second_line, .third_line {
+  margin-top: 4px;
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: rgb(206, 206, 206);
+}
