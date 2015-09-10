@@ -13,7 +13,7 @@ $random_pictures  = new WP_Query(picture_random_query());
 $live_posts = new WP_Query(live_query());
 ?>
 <div class="w-hidden-tiny section hero">
-    <div class="hero-text">Du 7 Novembre 2014 jusqu'au 16 Novembre 2014 </div>
+    <div class="hero-text">Du 6 novembre 2015 jusqu'au 15 novembre 2015</div>
 </div>
 <div class="section menu-padding-mobile">
   <div class="w-container">

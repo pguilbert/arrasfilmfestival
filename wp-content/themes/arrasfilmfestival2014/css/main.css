@@ -125,7 +125,7 @@ p, .article ul li, .article ol li {
 }
 .section.hero {
   margin-top: 64px;
-  background-color: #ffc410;
+  background-color: #523386;
 }
 .section.partners {
   background-color: #f2f2f2;
@@ -629,7 +629,6 @@ div.aligncenter {
 .live-icon.live {
   color: #FF0000;
 }
-
 
 .first_line {
   display: block;
